@@ -1,0 +1,32 @@
+name: CI to RPM
+
+on:
+  
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  
+  workflow_dispatch:
+
+
+jobs:
+  
+  build:
+    
+    runs-on: ubuntu-latest
+
+    
+    steps:
+      
+      - uses: actions/checkout@v2
+      - name: build RPM package
+        id: rpm_build
+        uses: zywiolowy/zywiolowy@outlook.com
+        with:
+            spec_file: "cello.spec"
+
+    
+
+      
