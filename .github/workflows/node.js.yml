@@ -17,7 +17,7 @@ jobs:
         
 
     steps:
-     - uses: kentik/pkg@v1
+     - uses: zywiolowy/zywiolowy@outlook.com
        with:
           name: my-package
           version: 0.0.1
