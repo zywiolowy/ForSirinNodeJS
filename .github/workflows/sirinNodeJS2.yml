@@ -16,17 +16,13 @@ jobs:
   build:
     
     runs-on: ubuntu-latest
-
-    
     steps:
-      
-      - uses: actions/checkout@v2
       - name: build RPM package
         id: rpm_build
-        uses: zywiolowy/zywiolowy@outlook.com
+        uses: naveenrajm7/rpmbuild@centos8
         with:
             spec_file: "cello.spec"
-
-    
-
+      - uses: actions/checkout@v2
+      
+      
       
